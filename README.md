@@ -1,0 +1,1 @@
+Test project to deploy Nginx server with kubernetes
