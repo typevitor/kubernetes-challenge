@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: LoadBalancer 
+  # Fazer isso numa AWS, ela pode gera 
+  # um IP externo para o load balance com o elastic ip
+  selector:
+    app: nginx
+  ports:
+  - port: 80 #porta do service
+    targetPort: 80 #porta do container
